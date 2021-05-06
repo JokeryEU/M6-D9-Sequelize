@@ -6,7 +6,7 @@ import ReviewModel from "./Review.js";
 
 const { Sequelize, DataTypes } = sequelize;
 
-const sequelize = new Sequelize(
+export const sequelize = new Sequelize(
   process.env.PGDATABASE,
   process.env.PGUSER,
   process.env.PGPASSWORD,
