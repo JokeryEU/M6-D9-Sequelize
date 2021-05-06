@@ -1,4 +1,9 @@
 import sequelize from "sequelize";
+import ArticleModel from "./Article.js";
+import AuthorModel from "./Author.js";
+import CategoryModel from "./Category.js";
+import ReviewModel from "./Review.js";
+
 const { Sequelize, DataTypes } = sequelize;
 
 const sequelize = new Sequelize(
@@ -7,10 +12,6 @@ const sequelize = new Sequelize(
   process.env.PGPASSWORD,
   { port: process.env.PGPORT, host: process.env.PGHOST, dialect: "postgres" }
 );
-import ArticleModel from "./Article.js";
-import AuthorModel from "./Author.js";
-import CategoryModel from "./Category.js";
-import ReviewModel from "./Review.js";
 
 export const Article = ArticleModel(sequelize, DataTypes);
 export const Author = AuthorModel(sequelize, DataTypes);
